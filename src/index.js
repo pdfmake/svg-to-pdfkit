@@ -1202,6 +1202,14 @@ var SVGtoPDF = function(doc, svg, x, y, options) {
     };
 
     var SvgElem = function(obj, inherits) {
+      // Bound both the size and depth of trees expanded through <use> references.
+      this.useDepth = inherits ? inherits.useDepth + (inherits instanceof SvgElemUse ? 1 : 0) : 0;
+      if (this.useDepth > MAX_USE_DEPTH) {
+        throw new Error('SVGtoPDF: <use> reference depth limit exceeded (' + MAX_USE_DEPTH + ')');
+      }
+      if (this.useDepth && ++useExpansionElements > MAX_USE_EXPANSION_ELEMENTS) {
+        throw new Error('SVGtoPDF: <use> expansion limit exceeded (' + MAX_USE_EXPANSION_ELEMENTS + ' elements)');
+      }
       let styleCache = Object.create(null);
       let childrenCache = null;
       this.name = obj.nodeName;
@@ -2630,7 +2638,10 @@ var SVGtoPDF = function(doc, svg, x, y, options) {
         groupStack = [],
         documentCache = {},
         links = [],
-        styleRules = [];
+        styleRules = [],
+        useExpansionElements = 0;
+    const MAX_USE_EXPANSION_ELEMENTS = 20000,
+          MAX_USE_DEPTH = 64;
 
     if (typeof warningCallback !== 'function') {
       warningCallback = function(str) {

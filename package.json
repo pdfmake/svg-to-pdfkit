@@ -1,13 +1,16 @@
 {
-  "name": "svg-to-pdfkit",
+  "name": "@pdfmake/svg-to-pdfkit",
   "version": "0.1.8",
   "description": "Insert SVG into a PDF document created with PDFKit",
-  "author": "alafr",
+  "author": {
+    "name": "Libor M.",
+    "email": "liborm85@gmail.com"
+  },
   "license": "MIT",
-  "repository": "https://github.com/alafr/SVG-to-PDFKit",
-  "bugs": "https://github.com/alafr/SVG-to-PDFKit/issues",
+  "repository": "https://github.com/pdfmake/svg-to-pdfkit",
+  "bugs": "https://github.com/pdfmake/svg-to-pdfkit/issues",
   "main": "source.js",
   "devDependencies": {
-    "pdfkit": ">=0.8.1"
+    "pdfkit": ">=0.20.2"
   }
 }

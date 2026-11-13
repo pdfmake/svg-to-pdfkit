@@ -9,7 +9,8 @@
   "license": "MIT",
   "repository": "https://github.com/pdfmake/svg-to-pdfkit",
   "bugs": "https://github.com/pdfmake/svg-to-pdfkit/issues",
-  "main": "source.js",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
   "devDependencies": {
     "pdfkit": ">=0.20.2"
   }

@@ -1,0 +1,7 @@
+.git*
+.idea/
+examples/
+notes/
+.editorconfig
+package-lock.json
+yarn.lock

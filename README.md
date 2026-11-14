@@ -1,4 +1,11 @@
-# @pdfmake/svg-to-pdfkit
+# @pdfmake/svg-to-pdfkit [![GitHub][github_img]][github_url] [![npm][npm_img]][npm_url]
+
+[github_img]: https://img.shields.io/github/release/pdfmake/svg-to-pdfkit.svg
+[github_url]: https://github.com/pdfmake/svg-to-pdfkit/releases/latest
+
+[npm_img]: https://img.shields.io/npm/v/@pdfmake/svg-to-pdfkit.svg
+[npm_url]: https://www.npmjs.com/package/@pdfmake/svg-to-pdfkit
+
 Insert SVG into a PDF document created with PDFKit.
 
 ## Install

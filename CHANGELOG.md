@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added a support for parsing `hsl()` and `hsla()` color formats
+
 ## 0.2.0 - 2026-11-13
 
 - Fixed class selector matching when SVG is passed as a string

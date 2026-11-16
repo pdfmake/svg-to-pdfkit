@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added a support for parsing `hsl()` and `hsla()` color formats
+- Added support for `orient="auto-start-reverse"` on SVG markers
 
 ## 0.2.0 - 2026-11-13
 
